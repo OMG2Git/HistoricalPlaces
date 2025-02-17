@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playwrite+FR+Moderne:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(249, 249, 249);
+            margin-left: 20px;
+            display: inline-block;
+        }
+
+        ul {
+            display: flex;
+            position: absolute;
+            list-style-type: none;
+            right: 0px;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin: 0 15px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            background-color: rgb(3, 43, 83);
+            padding: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: rgb(255, 248, 248);
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.3s ;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        a:hover {
+            color: #fff647;
+            animation: bounce 0.5s ease;
+        }
+
+        .top {
+            background-image: url('https://media2.thrillophilia.com/images/photos/000/383/720/original/1651658174_shutterstock_790124227.jpg?w=768&h=200&dpr=1.0');
+            background-size: cover;
+            height: 500px;
+            filter: contrast(1.2) brightness(1.1) blur(0px);
+        }
+
+        .title2 {
+            font-family: "Playwrite FR Moderne", serif;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(249, 246, 246);
+            margin-left: 20px;
+            display: inline-block;
+            position: relative;
+            top: 430px;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+            margin: 10px;
+            border: 2px solid rgb(186, 186, 186);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            border: 2px solid white;
+            transform: scale(1.1); 
+            background-color: #060606;
+        }
+
+        .card h3, .card p {
+            transition: color 0.3s ease;
+        }
+
+        .card:hover h3, .card:hover p {
+            color: #ffffff;
+        }
+
+        img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        h3 {
+            text-align: left;
+            padding-left: 10px;
+            font-family: "Lora", serif;
+            font-size: 15px;
+        }
+
+        p {
+            text-align: left;
+            padding-left: 10px;
+            font-family: "Lora", serif;
+            font-size: 12px;
+            color: rgb(100, 100, 100);
+        }
+
+        .more{
+            font-weight: bold;
+            color: rgb(100, 100, 100);
+        }
+
+        footer {
+            background: #b8b8b8;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .footer-section {
+            max-width: 250px;
+        }
+
+        .footer-section h2 {
+            color: #060606;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 5px 0;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: #f8b400;
+        }
+
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-link {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #f8b400;
+            color: #222;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            background: white;
+            color: #f6f6f6;
+        }
+
+        
+        .footer-bottom {
+            margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="title">OMG</div>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a>Contact</a></li>
+        </ul>
+    </nav>
+    <div class="top">
+        <div class="title2">
+            10 historical places in India
+        </div>
+    </div>
+    <h1 style="text-align: center; margin-top: 20px; margin-bottom: 20px; color: #f6f6f6;">Here is a List of the 10
+        Places with there
+        Info</h1>
+    <div class="cards">
+        <div class="card">
+            <img src="https://media1.thrillophilia.com/filestore/q0nyyhsrwksc7e6dr1akfdk0iepm_Taj%20Mahal-3.jpg?w=305&h=230&dpr=1.0"
+                alt="">
+            <h3>1. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://media1.thrillophilia.com/filestore/6rmea1735f8769wvoo8zprbf54rv_photo-1477586957327-847a0f3f4fe3.jfif?w=305&h=230&dpr=1.0"
+                alt="">
+            <h3>2. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://media1.thrillophilia.com/filestore/9hagppudfykojbhgmswz6bg62e3z_61091638425f5.jpg?w=305&h=230&dpr=1.0"
+                alt="">
+            <h3>3. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://media1.thrillophilia.com/filestore/k9ckfx3i5ax627tz0w12kkappuw0_amber-fort-dzhaipur-radzhastkhan-indiia.jpg?w=305&h=230&dpr=1.0"
+                alt="">
+            <h3>4. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://media1.thrillophilia.com/filestore/10vuntdanxtqm0pt8ajten28lryx_shutterstock_2333799389.jpg?w=305&h=230&dpr=1.0"
+                alt="">
+            <h3>5. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://www.holidify.com/images/attr_square/1177.jpg" alt="">
+            <h3>6. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://www.holidify.com/images/attr_square/2438.jpg" alt="">
+            <h3>7. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://www.holidify.com/images/attr_square/1731.jpg" alt="">
+            <h3>8. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://www.holidify.com/images/attr_square/2866.jpg" alt="">
+            <h3>9. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://www.holidify.com/images/attr_square/1951.jpg" alt="">
+            <h3>10. Lorem, ipsum.</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit recusandae quae repellendus ea. Nihil,
+                repudiandae hic nemo illo dignissimos accusamus?  <a class="more" href="https://en.wikipedia.org/wiki/Taj_Mahal">Read more...</a>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>We provide top-notch services to help you grow your business. Follow us on social media for updates.
+                </p>
+            </div>
+
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p><i class="fas fa-envelope"></i> contact@omg.com</p>
+                <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 YourWebsite. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

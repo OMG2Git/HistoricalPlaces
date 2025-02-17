@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            margin: 0px;
+        }
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(249, 249, 249);
+            margin-left: 20px;
+            display: inline-block;
+        }
+
+        ul {
+            display: flex;
+            position: absolute;
+            list-style-type: none;
+            right: 0px;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin: 0 15px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            background-color: rgb(3, 43, 83);
+            padding: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: rgb(255, 248, 248);
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        a:hover {
+            color: #fff647;
+            animation: bounce 0.5s ease;
+        }
+
+        #services .service-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #services .service-item h3 {
+            font-size: 1.8rem;
+            color: #333;
+            
+        }
+
+        #services .service-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+    </style>
+</head>
+
+<body>
+        <nav style="width: 100%;">
+            <div class="title">OMG</div>
+            <ul>
+                <li><a href="project.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a>Services</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
+
+    <section id="services">
+        <div class="content">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>Service One</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.</p>
+            </div>
+            <div class="service-item">
+                <h3>Service Two</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.</p>
+            </div>
+            <div class="service-item">
+                <h3>Service Three</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
+                    cursus ante dapibus diam.</p>
+            </div>
+        </div>
+    </section>
+
+    <p style=" display: block;  position: absolute; bottom: 0px;">&copy; 2025 Our Company. All rights reserved.</p>
+</body>
+
+</html>

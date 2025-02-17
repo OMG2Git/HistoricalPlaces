@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+
+
+        section {
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        section#about {
+            background-color: #fff;
+        }
+
+        section#team {
+            background-color: #f9f9f9;
+        }
+
+        section#contact {
+            background-color: #fff;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(249, 249, 249);
+            margin-left: 20px;
+            display: inline-block;
+        }
+
+        ul {
+            display: flex;
+            position: absolute;
+            list-style-type: none;
+            right: 0px;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin: 0 15px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            background-color: rgb(3, 43, 83);
+            padding: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: rgb(255, 248, 248);
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.3s ;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        a:hover {
+            color: #fff647;
+            animation: bounce 0.5s ease;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="title">OMG</div>
+            <ul>
+                <li><a href="project.html">Home</a></li>
+                <li><a>About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec nunc vestibulum congue sit
+                amet ac neque. Donec lacinia, sapien at posuere hendrerit, ligula libero viverra velit, at condimentum
+                enim leo id nunc. Cras sollicitudin lorem ac urna venenatis, ac egestas risus vestibulum.</p>
+            <p>Suspendisse potenti. Ut in turpis eget dui laoreet dapibus. Integer ultricies orci ut erat tristique, nec
+                aliquet urna placerat. Curabitur eu orci non urna tincidunt viverra a nec magna. Donec non interdum
+                arcu. Vivamus auctor vitae eros vel sodales.</p>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="content">
+            <h2>Our Team</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna nec nunc vestibulum congue sit
+                amet ac neque. Donec lacinia, sapien at posuere hendrerit, ligula libero viverra velit, at condimentum
+                enim leo id nunc.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need more information, feel free to reach out to us!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Our Company. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
